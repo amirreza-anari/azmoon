@@ -22,7 +22,7 @@ form{
     margin: auto;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 600px;
     width: 350px;
     background-color: rgba(255,255,255,0.13);
     border-radius: 10px;
@@ -70,26 +70,91 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+p {
+    display: none;
+    height: 30px;
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    margin-top: 20px;
+}
 
     </style>
 </head>
 <body>
-    <form>
+    <form action="" method="post" id="form">
         <h3><b>ورود</b></h3>
 
-        <label for="username">نام کاربری</label>
-        <input type="text" placeholder="نام کاربری را وارد کنید" id="username">
+        <label>نام کاربری</label>
+        <input type="text" placeholder="نام کاربری را وارد کنید" id="username" class="input">
 
-        <label for="password">ایمیل</label>
-        <input type="password" placeholder="ایمیل خود را وارد کنید" id="password">
+        <label>ایمیل</label>
+        <input type="text" placeholder="ایمیل خود را وارد کنید" id="email" class="input">
 
-        <label for="username">رمز عبور</label>
-        <input type="text" placeholder="رمز خود را وارد کنید" id="username">
+        <label>رمز عبور</label>
+        <input type="password" placeholder="رمز خود را وارد کنید" id="passwordkey" class="input">
 
-        <label for="password">تکرار رمز عبور</label>
-        <input type="password" placeholder="رمز عبور خود را تکرار کنید" id="password">
+        <label>تکرار رمز عبور</label>
+        <input type="password" placeholder="رمز عبور خود را تکرار کنید" id="confirmpassword" class="input">
+        
+        <p>ارور</p>
 
-        <button>ورود</button>
+        <button type="submit" onclick="validateForm()">ورود</button>
+
     </form>
+
+
+
+    <script>
+        function validateForm(){
+
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("passwordkey").value;
+            let confirmPassword = document.getElementById("confirmpassword").value;
+            let form = document.getElementById('form');
+            let errormsg = document.querySelector('p');
+
+
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
+                showError("همه فیلدها باید پر شوند.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                showError("ایمیل دارای فرمت معتبر نیست.");
+                return false;
+            }
+    
+            if (password.length < 8) {
+                showError("رمز عبور باید حداقل ۸ کاراکتر داشته باشد.");
+                return false;
+            }
+    
+            if (password !== confirmPassword) {
+                showError("رمز عبور و تکرار آن باید یکسان باشند.");
+                return false;
+            }
+    
+            errormsg.style.display = "none";
+            return true;
+        }
+
+        document.getElementById("form").onsubmit = function() {
+             return validateForm();
+        };
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showError(message) {
+            let errorElement = document.querySelector("p");
+            errorElement.textContent = message;
+            errorElement.style.display = "block";
+        }
+
+
+    </script>
 </body>
 </html>
