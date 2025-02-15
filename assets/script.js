@@ -4,7 +4,7 @@ function validateForm() {
     let email = document.getElementById("email").value;
     let password = document.getElementById("passwordkey").value;
     let confirmPassword = document.getElementById("confirmpassword").value;
-    let errormsg = document.querySelector('p');
+    let errorElement = document.querySelector('p');
 
     // بررسی پر بودن تمام فیلدها
     if (username === "" || email === "" || password === "" || confirmPassword === "") {
@@ -30,7 +30,7 @@ function validateForm() {
         return false;
     }
 
-    errormsg.style.display = "none";
+    errorElement.style.display = "none";
     return true;
 }
 
