@@ -4,7 +4,6 @@ function validateForm(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("passwordkey").value;
     let confirmPassword = document.getElementById("confirmpassword").value;
-    let form = document.getElementById('form');
     let errormsg = document.querySelector('p');
 
 
