@@ -1,4 +1,5 @@
 body{
+    font-family: 'Vazirmatn', sans-serif;
     direction: rtl;
     background-color: #080710;
     display: flex;
@@ -21,7 +22,6 @@ body{
 
 .container *{
     text-align: center;
-    font-family: 'Poppins',sans-serif;
     color: #ffffff;
     line-height: 40px;
     border: none;

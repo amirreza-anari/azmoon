@@ -8,12 +8,6 @@ body{
     height: 100vh;
 }
 
-* {
-    font-family: 'Vazirmatn', sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
 form{
     margin: auto;
     justify-content: center;
