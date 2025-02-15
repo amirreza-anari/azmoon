@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- بارگذاری فونت Vazirmatn از گوگل -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 
+    <!-- لینک به فایل استایل خارجی -->
     <link rel="stylesheet" href="../assets/style.css">
     
     <title>ورود</title>
 </head>
 <body>
+    <!-- فرم ورود -->
     <form action="../assets/result.php" method="post" id="form">
         <h3><b>فرم ورود</b></h3>
 
+        <!-- فیلد نام کاربری -->
         <label>نام کاربری</label>
         <input type="text" placeholder="نام کاربری را وارد کنید" id="username" class="input" name="username">
 
+        <!-- فیلد ایمیل -->
         <label>ایمیل</label>
         <input type="text" placeholder="ایمیل خود را وارد کنید" id="email" class="input" name="email">
 
+        <!-- فیلد رمز عبور -->
         <label>رمز عبور</label>
         <input type="password" placeholder="رمز خود را وارد کنید" id="passwordkey" class="input" name="password">
 
+        <!-- فیلد تکرار رمز عبور -->
         <label>تکرار رمز عبور</label>
         <input type="password" placeholder="رمز عبور خود را تکرار کنید" id="confirmpassword" class="input" name="confirmpassword">
         
+        <!-- نمایش پیام خطا (در صورت نیاز) -->
         <p>ارور</p>
 
+        <!-- دکمه ارسال فرم -->
         <button type="submit" onclick="validateForm()">ورود</button>
-
     </form>
 
-
-
+    <!-- بارگذاری فایل جاوا اسکریپت -->
     <script src="../assets/script.js"></script>
 </body>
 </html>

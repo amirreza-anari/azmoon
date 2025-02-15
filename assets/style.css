@@ -1,5 +1,12 @@
-body{
+/* تنظیم همه المان ها */
+* {
     font-family: 'Vazirmatn', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* تنظیمات کلی صفحه */
+body{
     direction: rtl;
     background-color: #080710;
     display: flex;
@@ -8,7 +15,8 @@ body{
     height: 100vh;
 }
 
-form{
+/* استایل فرم */
+form {
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -20,24 +28,30 @@ form{
     padding: 50px 35px 50px 40px;
 }
 
-form *{
+/* استایل تمام عناصر داخل فرم */
+form * {
     color: #ffffff;
     border: none;
 }
 
-form h3{
+/* استایل عنوان فرم */
+form h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
 }
-label{
+
+/* استایل برچسب‌ها (Label) */
+label {
     display: inline-block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
-input{
+
+/* استایل فیلدهای ورودی */
+input {
     padding-right: 10px;
     display: block;
     height: 50px;
@@ -48,7 +62,9 @@ input{
     font-size: 14px;
     font-weight: 300;
 }
-button{
+
+/* استایل دکمه ارسال */
+button {
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
@@ -60,16 +76,12 @@ button{
     cursor: pointer;
 }
 
+/* استایل پیام خطا */
 p {
     display: none;
-    height: 30px;
+    height: 20px;
     text-align: center;
     color: red;
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-* {
-    padding: 0;
-    margin: 0;
+    font-size: 25px;
+    margin-top: 10px;
 }

@@ -1,3 +1,4 @@
+/* تنظیمات کلی برای بدنه (body) صفحه */
 body{
     font-family: 'Vazirmatn', sans-serif;
     direction: rtl;
@@ -9,6 +10,7 @@ body{
     margin: 0;
 }
 
+/* استایل مربوط به کانتینر اصلی نمایش پیام نتیجه */
 .container{
     justify-content: center;
     align-items: center;
@@ -20,6 +22,7 @@ body{
     padding: 50px 35px;
 }
 
+/* تنظیمات کلی برای تمامی عناصر داخل کانتینر */
 .container *{
     text-align: center;
     color: #ffffff;
@@ -27,6 +30,7 @@ body{
     border: none;
 }
 
+/* استایل مخصوص برای نمایش پیام نتیجه */
 #result{
     font-size: 20px;
     font-weight: 200;
