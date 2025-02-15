@@ -1,0 +1,35 @@
+body{
+    direction: rtl;
+    background-color: #080710;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 600px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    border: 2px solid rgba(231, 231, 231, 0.349);
+    padding: 50px 35px;
+}
+
+.container *{
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    line-height: 40px;
+    border: none;
+}
+
+#result{
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: chartreuse;
+}
